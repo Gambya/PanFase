@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86D74743-D054-4AE6-AD0E-AB8BBA4AE3DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PanFASE</RootNamespace>
+    <AssemblyName>PanFASE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WindowsFormsApplication1.PanFase</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cliente.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="com\merda\panfase\ADO\TConnect.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="PedidoProduto.cs" />
+    <Compile Include="RPedidoProduto.cs" />
+    <Compile Include="TelaPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPeriodo.Designer.cs">
+      <DependentUpon>TelaPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPesquisaClienteVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaClienteVendas.Designer.cs">
+      <DependentUpon>TelaPesquisaClienteVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPesquisaFuncionarioVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaFuncionarioVendas.Designer.cs">
+      <DependentUpon>TelaPesquisaFuncionarioVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPesquisaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaProduto.Designer.cs">
+      <DependentUpon>TelaPesquisaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPesquisaProdutoVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaProdutoVendas.Designer.cs">
+      <DependentUpon>TelaPesquisaProdutoVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaProduto.Designer.cs">
+      <DependentUpon>TelaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaUpdateCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaUpdateCliente.Designer.cs">
+      <DependentUpon>TelaUpdateCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaUpdateFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaUpdateFuncionario.Designer.cs">
+      <DependentUpon>TelaUpdateFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaUpdateProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaUpdateProduto.Designer.cs">
+      <DependentUpon>TelaUpdateProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaVendas.Designer.cs">
+      <DependentUpon>TelaVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanFase.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="TelaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCliente.Designer.cs">
+      <DependentUpon>TelaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaFuncionario.Designer.cs">
+      <DependentUpon>TelaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPesquisaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaCliente.Designer.cs">
+      <DependentUpon>TelaPesquisaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPesquisaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaFuncionario.Designer.cs">
+      <DependentUpon>TelaPesquisaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPrincipal.Designer.cs">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaRelatorio.Designer.cs">
+      <DependentUpon>TelaRelatorio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Relatorio_Vendas.rdlc" />
+    <EmbeddedResource Include="TelaPeriodo.resx">
+      <DependentUpon>TelaPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaClienteVendas.resx">
+      <DependentUpon>TelaPesquisaClienteVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaFuncionarioVendas.resx">
+      <DependentUpon>TelaPesquisaFuncionarioVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaProduto.resx">
+      <DependentUpon>TelaPesquisaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaProdutoVendas.resx">
+      <DependentUpon>TelaPesquisaProdutoVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCliente.resx">
+      <DependentUpon>TelaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaFuncionario.resx">
+      <DependentUpon>TelaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaCliente.resx">
+      <DependentUpon>TelaPesquisaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaFuncionario.resx">
+      <DependentUpon>TelaPesquisaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TelaProduto.resx">
+      <DependentUpon>TelaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaRelatorio.resx">
+      <DependentUpon>TelaRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaUpdateCliente.resx">
+      <DependentUpon>TelaUpdateCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaUpdateFuncionario.resx">
+      <DependentUpon>TelaUpdateFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaUpdateProduto.resx">
+      <DependentUpon>TelaUpdateProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaVendas.resx">
+      <DependentUpon>TelaVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Cliente.datasource" />
+    <None Include="Properties\DataSources\PedidoProduto.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="com\merda\panfase\assets\Image\padarialogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="com\merda\panfase\assets\Image\padaria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="com\merda\panfase\assets\Image\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

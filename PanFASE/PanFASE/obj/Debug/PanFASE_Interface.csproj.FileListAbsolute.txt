@@ -1,0 +1,16 @@
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\bin\Debug\PanFASE.exe.config
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\bin\Debug\PanFASE.exe
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\bin\Debug\PanFASE.pdb
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE_Interface.csprojResolveAssemblyReference.cache
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaCliente.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaFuncionario.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaPesquisaCliente.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaPesquisaFuncionario_.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaPesquisaProduto.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaPrincipal.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.Properties.Resources.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaProduto.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.TelaRelatorio.resources
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE_Interface.csproj.GenerateResource.Cache
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.exe
+c:\users\sonnote\documents\visual studio 2013\Projects\PanFASE\PanFASE\obj\Debug\PanFASE.pdb
