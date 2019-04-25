@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PanFASE")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PanFase")]
+[assembly: AssemblyDescription("Sistemas Para Getao De Padarias")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MERDA")]
-[assembly: AssemblyProduct("PanFASE")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
+[assembly: AssemblyCompany("PanFase")]
+[assembly: AssemblyProduct("PanFase")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

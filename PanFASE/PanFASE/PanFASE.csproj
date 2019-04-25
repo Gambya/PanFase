@@ -7,9 +7,9 @@
     <ProjectGuid>{86D74743-D054-4AE6-AD0E-AB8BBA4AE3DC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PanFASE</RootNamespace>
-    <AssemblyName>PanFASE</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>PanFase</RootNamespace>
+    <AssemblyName>PanFase</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -54,11 +56,18 @@
     <StartupObject>WindowsFormsApplication1.PanFase</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.v12.12.0.0.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -80,143 +89,143 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs">
+    <Compile Include="Model\Cliente.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="com\merda\panfase\ADO\TConnect.cs" />
-    <Compile Include="Funcionario.cs" />
-    <Compile Include="PedidoProduto.cs" />
-    <Compile Include="RPedidoProduto.cs" />
-    <Compile Include="TelaPeriodo.cs">
+    <Compile Include="Data\AcessoDados.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Model\PedidoProduto.cs" />
+    <Compile Include="Model\RPedidoProduto.cs" />
+    <Compile Include="View\TelaPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPeriodo.Designer.cs">
+    <Compile Include="View\TelaPeriodo.Designer.cs">
       <DependentUpon>TelaPeriodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaClienteVendas.cs">
+    <Compile Include="View\TelaPesquisaClienteVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaClienteVendas.Designer.cs">
+    <Compile Include="View\TelaPesquisaClienteVendas.Designer.cs">
       <DependentUpon>TelaPesquisaClienteVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaFuncionarioVendas.cs">
+    <Compile Include="View\TelaPesquisaFuncionarioVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaFuncionarioVendas.Designer.cs">
+    <Compile Include="View\TelaPesquisaFuncionarioVendas.Designer.cs">
       <DependentUpon>TelaPesquisaFuncionarioVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaProduto.cs">
+    <Compile Include="View\TelaPesquisaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaProduto.Designer.cs">
+    <Compile Include="View\TelaPesquisaProduto.Designer.cs">
       <DependentUpon>TelaPesquisaProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaProdutoVendas.cs">
+    <Compile Include="View\TelaPesquisaProdutoVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaProdutoVendas.Designer.cs">
+    <Compile Include="View\TelaPesquisaProdutoVendas.Designer.cs">
       <DependentUpon>TelaPesquisaProdutoVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaProduto.cs">
+    <Compile Include="View\TelaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaProduto.Designer.cs">
+    <Compile Include="View\TelaProduto.Designer.cs">
       <DependentUpon>TelaProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaUpdateCliente.cs">
+    <Compile Include="View\TelaUpdateCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaUpdateCliente.Designer.cs">
+    <Compile Include="View\TelaUpdateCliente.Designer.cs">
       <DependentUpon>TelaUpdateCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaUpdateFuncionario.cs">
+    <Compile Include="View\TelaUpdateFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaUpdateFuncionario.Designer.cs">
+    <Compile Include="View\TelaUpdateFuncionario.Designer.cs">
       <DependentUpon>TelaUpdateFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaUpdateProduto.cs">
+    <Compile Include="View\TelaUpdateProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaUpdateProduto.Designer.cs">
+    <Compile Include="View\TelaUpdateProduto.Designer.cs">
       <DependentUpon>TelaUpdateProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaVendas.cs">
+    <Compile Include="View\TelaVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaVendas.Designer.cs">
+    <Compile Include="View\TelaVendas.Designer.cs">
       <DependentUpon>TelaVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanFase.cs" />
-    <Compile Include="Pedido.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Produto.cs" />
-    <Compile Include="TelaCliente.cs">
+    <Compile Include="Model\PanFase.cs" />
+    <Compile Include="Model\Pedido.cs" />
+    <Compile Include="Model\Pessoa.cs" />
+    <Compile Include="Model\Produto.cs" />
+    <Compile Include="View\TelaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCliente.Designer.cs">
+    <Compile Include="View\TelaCliente.Designer.cs">
       <DependentUpon>TelaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaFuncionario.cs">
+    <Compile Include="View\TelaFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaFuncionario.Designer.cs">
+    <Compile Include="View\TelaFuncionario.Designer.cs">
       <DependentUpon>TelaFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaCliente.cs">
+    <Compile Include="View\TelaPesquisaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaCliente.Designer.cs">
+    <Compile Include="View\TelaPesquisaCliente.Designer.cs">
       <DependentUpon>TelaPesquisaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaFuncionario.cs">
+    <Compile Include="View\TelaPesquisaFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaFuncionario.Designer.cs">
+    <Compile Include="View\TelaPesquisaFuncionario.Designer.cs">
       <DependentUpon>TelaPesquisaFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPrincipal.cs">
+    <Compile Include="View\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPrincipal.Designer.cs">
+    <Compile Include="View\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaRelatorio.cs">
+    <Compile Include="View\TelaRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaRelatorio.Designer.cs">
+    <Compile Include="View\TelaRelatorio.Designer.cs">
       <DependentUpon>TelaRelatorio.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Relatorio_Vendas.rdlc" />
-    <EmbeddedResource Include="TelaPeriodo.resx">
+    <EmbeddedResource Include="Model\Relatorio_Vendas.rdlc" />
+    <EmbeddedResource Include="View\TelaPeriodo.resx">
       <DependentUpon>TelaPeriodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaClienteVendas.resx">
+    <EmbeddedResource Include="View\TelaPesquisaClienteVendas.resx">
       <DependentUpon>TelaPesquisaClienteVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaFuncionarioVendas.resx">
+    <EmbeddedResource Include="View\TelaPesquisaFuncionarioVendas.resx">
       <DependentUpon>TelaPesquisaFuncionarioVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaProduto.resx">
+    <EmbeddedResource Include="View\TelaPesquisaProduto.resx">
       <DependentUpon>TelaPesquisaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaProdutoVendas.resx">
+    <EmbeddedResource Include="View\TelaPesquisaProdutoVendas.resx">
       <DependentUpon>TelaPesquisaProdutoVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCliente.resx">
+    <EmbeddedResource Include="View\TelaCliente.resx">
       <DependentUpon>TelaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaFuncionario.resx">
+    <EmbeddedResource Include="View\TelaFuncionario.resx">
       <DependentUpon>TelaFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaCliente.resx">
+    <EmbeddedResource Include="View\TelaPesquisaCliente.resx">
       <DependentUpon>TelaPesquisaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaFuncionario.resx">
+    <EmbeddedResource Include="View\TelaPesquisaFuncionario.resx">
       <DependentUpon>TelaPesquisaFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPrincipal.resx">
+    <EmbeddedResource Include="View\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -229,24 +238,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaProduto.resx">
+    <EmbeddedResource Include="View\TelaProduto.resx">
       <DependentUpon>TelaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaRelatorio.resx">
+    <EmbeddedResource Include="View\TelaRelatorio.resx">
       <DependentUpon>TelaRelatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaUpdateCliente.resx">
+    <EmbeddedResource Include="View\TelaUpdateCliente.resx">
       <DependentUpon>TelaUpdateCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaUpdateFuncionario.resx">
+    <EmbeddedResource Include="View\TelaUpdateFuncionario.resx">
       <DependentUpon>TelaUpdateFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaUpdateProduto.resx">
+    <EmbeddedResource Include="View\TelaUpdateProduto.resx">
       <DependentUpon>TelaUpdateProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaVendas.resx">
+    <EmbeddedResource Include="View\TelaVendas.resx">
       <DependentUpon>TelaVendas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Cliente.datasource" />
     <None Include="Properties\DataSources\PedidoProduto.datasource" />
     <None Include="Properties\Settings.settings">
@@ -280,17 +290,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="com\merda\panfase\assets\Image\padarialogo.png" />
+    <None Include="Assets\padarialogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="com\merda\panfase\assets\Image\padaria.jpg" />
+    <None Include="Assets\padaria.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="com\merda\panfase\assets\Image\logo.png" />
+    <None Include="Assets\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <Content Include="Assets\icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
